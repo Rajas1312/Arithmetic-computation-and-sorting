@@ -43,3 +43,24 @@ do
 done
 
 echo "dictionary values in array " ${comp[@]}
+
+
+for (( i=0; i<4; i++ ))
+do
+	for (( j=$i; j<4; j++ ))
+	do
+		if [ ${comp[$i]} -lt ${comp[$j]} ]
+		then
+			t=${comp[$i]}
+			comp[$i]=${comp[$j]}
+			comp[$j]=$t
+		fi
+	done
+done
+
+echo " sorted numbers in desending order are"
+for (( i=0; i<4; i++ ))
+do
+	echo ${comp[$i]}
+done
+
