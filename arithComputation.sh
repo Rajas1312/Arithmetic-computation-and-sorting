@@ -12,3 +12,6 @@ echo "enter number 3-"
 read c
 echo $c
 
+computation1=$((a+b*c))
+echo "$computation1"
+
