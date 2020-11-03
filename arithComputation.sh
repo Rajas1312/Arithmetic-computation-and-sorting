@@ -32,3 +32,14 @@ computation_dict[3]=$computation3
 computation_dict[4]=$computation4
 
 echo "values of computation in dictionary -  "  ${computation_dict[@]}
+
+declare -a comp
+
+count=0
+
+for i in ${computation_dict[@]}
+do
+	comp[((count++))]=$i
+done
+
+echo "dictionary values in array " ${comp[@]}
