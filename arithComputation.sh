@@ -15,3 +15,5 @@ echo $c
 computation1=$((a+b*c))
 echo "$computation1"
 
+computation2=$((a*b+c))
+echo "$computation2"
