@@ -64,3 +64,21 @@ do
 	echo ${comp[$i]}
 done
 
+for (( i=0; i<4; i++ ))
+do
+	for (( j=$i; j<4; j++ ))
+	do
+		if [ ${comp[$i]} -gt ${comp[$j]} ]
+		then
+			t=${comp[$i]}
+			comp[$i]=${comp[$j]}
+			comp[$j]=$t
+
+		fi
+	done
+done
+echo "sorting numbers in Ascending order"
+for (( i=0; i<4; i++ ))
+do
+	echo ${comp[$i]}
+done
